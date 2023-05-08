@@ -1,0 +1,37 @@
+/*
+Oscar Reyes-Sanchez
+1 Hz counter using board oscillator and 7 segment display
+*/
+
+module part3 (MAX10_CLK1_50, HEX0);
+	input MAX10_CLK1_50;
+	output HEX0;
+	
+	reg [26:0] t; //Time value
+	wire ResTimer; //Reset Timer
+	
+	timer FiftyToOne (MAX10_CLK1_50, ResTimer, t, 50)
+	
+	
+	
+	/*
+	Goal
+	If timer reaches 50 million, reset and add one to hexcount
+	*/
+	
+endmodule
+
+module timer (Clock, Reset_n, Q, n);
+	input n;
+	
+	input Clock, Reset_n;
+	output reg [n-1:0] Q;
+		
+	always @(posedge Clock or negedge Reset_n)
+		begin
+			if (!Reset_n)
+				Q <= 1’d0;
+			else
+				Q <= Q + 1’b1;
+		end
+endmodule

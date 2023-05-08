@@ -1,0 +1,37 @@
+/*
+Oscar Reyes-Sanchez
+Lab 2 part 1
+decoder for two displays
+*/
+
+module part1 (SW, LEDR, HEX0, HEX1);
+
+	input SW[9:0];
+	output LEDR[9:0];
+	output HEX0[6:0];
+	output HEX1[6:0];
+	
+	wire [6:0] H0, H1;
+	
+	bcd7seg disp1 (SW[7:4], H1);
+	assign HEX1 = H1;
+	
+	bcd7seg disp0 (SW[3:0], H0);
+	assign HEX0 = H0;
+	
+endmodule
+
+module bcd7seg (s, out);
+
+	input [3:0] s;
+	output [6:0] out;
+	
+	out[0] = (s[2] & ~s[1] & ~s[0]) + (~s[3] & ~s[2] & ~ s[1] & s[0]);
+	out[1] = (s[2] & ~s[1] & s[0]) + (s[2] & s[1] & ~s[0]);
+	out[2] = ;
+	out[3] = ;
+	out[4] = ;
+	out[5] = ;
+	out[6] = ;
+
+endmodule

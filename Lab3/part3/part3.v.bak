@@ -1,0 +1,36 @@
+/*
+Oscar Reyes-Sanchez
+Master-slave D flip-flop in verilog
+	*/
+module part3 (KEY1, LEDR, SW);
+	input KEY1;
+	input [9:0] SW;
+	output [9:0] LEDR;
+	
+	wire Q, Qm;
+	
+	gateddlatch master (~SW[0], ~KEY1, Qm);
+	gateddlatch slave (SW[0], Qm, Q);
+	
+	assign LEDR[0] = SW[0];
+	assign LEDR[1] = ~KEY1;
+	assign LEDR[2] = Q;
+	assign LEDR[9:3] = 7'b0;	
+endmodule
+
+module gateddlatch (Clk, D, Q);
+	input Clk, D;
+	output Q;
+	
+	wire R, S, R_g, S_g, Qa, Qb /* synthesis keep */ ;
+	
+	assign S = D;
+	assign R = ~D;
+	
+	assign R_g = ~(R & Clk);
+	assign S_g = ~(S & Clk);
+	assign Qa = ~(S_g & Qb);
+	assign Qb = ~(R_g & Qa);
+	assign Q = Qa;
+
+endmodule

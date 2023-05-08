@@ -1,0 +1,8 @@
+C:/Users/oars0/Documents/School/Digital_Systems/QuestaSetup/counter.v {1 {vlog -work sequential -vopt -stats=none C:/Users/oars0/Documents/School/Digital_Systems/QuestaSetup/counter.v
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module counter
+
+Top level modules:
+	counter
+
+} {} {}}

@@ -1,0 +1,119 @@
+|part2
+SW[0] => SW[0].IN2
+SW[1] => SW[1].IN2
+SW[2] => SW[2].IN2
+SW[3] => SW[3].IN2
+SW[4] => ~NO_FANOUT~
+SW[5] => ~NO_FANOUT~
+SW[6] => ~NO_FANOUT~
+SW[7] => ~NO_FANOUT~
+SW[8] => ~NO_FANOUT~
+SW[9] => ~NO_FANOUT~
+HEX0[0] <= bcd7seg:disp0.port1
+HEX0[1] <= bcd7seg:disp0.port1
+HEX0[2] <= bcd7seg:disp0.port1
+HEX0[3] <= bcd7seg:disp0.port1
+HEX0[4] <= bcd7seg:disp0.port1
+HEX0[5] <= bcd7seg:disp0.port1
+HEX0[6] <= bcd7seg:disp0.port1
+HEX1[0] <= forZbcd7seg:disp1.port1
+HEX1[1] <= forZbcd7seg:disp1.port1
+HEX1[2] <= forZbcd7seg:disp1.port1
+HEX1[3] <= forZbcd7seg:disp1.port1
+HEX1[4] <= forZbcd7seg:disp1.port1
+HEX1[5] <= forZbcd7seg:disp1.port1
+HEX1[6] <= forZbcd7seg:disp1.port1
+LEDR[0] <= <GND>
+LEDR[1] <= <GND>
+LEDR[2] <= <GND>
+LEDR[3] <= <GND>
+LEDR[4] <= <GND>
+LEDR[5] <= <GND>
+LEDR[6] <= <GND>
+LEDR[7] <= <GND>
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
+
+
+|part2|Acircuit:VtoA
+V[0] => A[0].DATAIN
+V[1] => A.IN1
+V[1] => A[1].DATAIN
+V[2] => A.IN0
+V[3] => A.IN1
+A[0] <= V[0].DB_MAX_OUTPUT_PORT_TYPE
+A[1] <= V[1].DB_MAX_OUTPUT_PORT_TYPE
+A[2] <= A.DB_MAX_OUTPUT_PORT_TYPE
+A[3] <= <GND>
+
+
+|part2|fourwide2x1:VorA
+s => out.IN0
+s => out.IN0
+s => out.IN0
+s => out.IN0
+s => out.IN0
+s => out.IN0
+s => out.IN0
+s => out.IN0
+a[0] => out.IN1
+a[1] => out.IN1
+a[2] => out.IN1
+a[3] => out.IN1
+b[0] => out.IN1
+b[1] => out.IN1
+b[2] => out.IN1
+b[3] => out.IN1
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part2|forZbcd7seg:disp1
+z => out[5].DATAIN
+z => out[0].DATAIN
+z => out[3].DATAIN
+z => out[4].DATAIN
+out[0] <= z.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= <GND>
+out[2] <= <GND>
+out[3] <= z.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= z.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= z.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= <VCC>
+
+
+|part2|bcd7seg:disp0
+s[0] => out.IN1
+s[0] => out.IN1
+s[0] => out.IN1
+s[0] => out.IN1
+s[0] => out.IN1
+s[0] => out.IN1
+s[0] => out.IN1
+s[0] => out.IN1
+s[0] => out.IN1
+s[0] => out.IN1
+s[1] => out.IN1
+s[1] => out.IN0
+s[1] => out.IN0
+s[1] => out.IN1
+s[1] => out.IN0
+s[1] => out.IN1
+s[2] => out.IN0
+s[2] => out.IN1
+s[2] => out.IN1
+s[2] => out.IN0
+s[3] => out.IN1
+s[3] => out.IN1
+s[3] => out.IN1
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+

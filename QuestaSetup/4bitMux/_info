@@ -1,0 +1,57 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+!s11f vlog 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/Users/oars0/Documents/School/Digital_Systems/QuestaSetup
+T_opt
+!s110 1674052526
+Vh>=Wlaa<:[i_fGi69`OA_1
+Z2 04 8 4 work Mux_4bit fast 0
+=1-902e1627e939-63c803ad-37f-5048
+Z3 !s124 OEM10U1 
+o-quiet -auto_acc_if_foreign -work 4bitMux +acc
+Z4 tCvgOpt 0
+n@_opt
+Z5 OL;O;2021.2;73
+R1
+T_opt1
+!s110 1675259356
+VEQ;GoW1RLHJ^0QAbUUKCz1
+R2
+=1-902e1627e939-63da6ddc-6f-6f80
+R3
+o-quiet -auto_acc_if_foreign -work 4bitMux
+R4
+n@_opt1
+R5
+vMux_4bit
+!s110 1674052485
+!i10b 1
+!s100 mAKzSLbnPJmFR27WRIgRP0
+IoRAH:4=Q`NI]T`L;abd4>3
+R1
+w1674052455
+8C:/Users/oars0/Documents/School/Digital_Systems/QuestaSetup/4bitMux.v
+FC:/Users/oars0/Documents/School/Digital_Systems/QuestaSetup/4bitMux.v
+!i122 0
+L0 1 9
+VDg1SIo80bB@j0V0VzS_@n1
+OL;L;2021.2;73
+r1
+!s85 0
+31
+!s108 1674052485.000000
+!s107 C:/Users/oars0/Documents/School/Digital_Systems/QuestaSetup/4bitMux.v|
+!s90 -reportprogress|300|-work|4bitMux|-vopt|-stats=none|C:/Users/oars0/Documents/School/Digital_Systems/QuestaSetup/4bitMux.v|
+!i113 0
+o-work 4bitMux -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R4
+n@mux_4bit

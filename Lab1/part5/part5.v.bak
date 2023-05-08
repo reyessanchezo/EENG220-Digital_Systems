@@ -1,0 +1,19 @@
+/*
+Oscar Reyes-Sanchez, CMPE
+Digital Systems
+September 15, 2022
+7SD rotating word
+*/
+
+module part5(SW, LEDR, HEX0);
+
+	input  [9:0]SW;
+	output [9:0]LEDR;
+	output [6:0]HEX0;
+	
+	wire [1:0]sel;
+	assign sel = SW[1:0];
+
+endmodule
+
+module mux(s,)

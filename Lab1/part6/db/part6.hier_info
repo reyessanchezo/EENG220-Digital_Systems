@@ -1,0 +1,15 @@
+|part6
+L => Q.OUTPUTSELECT
+L => Q.OUTPUTSELECT
+L => Q.OUTPUTSELECT
+Clock => Q[0]~reg0.CLK
+Clock => Q[1]~reg0.CLK
+Clock => Q[2]~reg0.CLK
+Data[0] => Q.DATAB
+Data[1] => Q.DATAB
+Data[2] => Q.DATAB
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,33 @@
+|part3
+SW[0] => m1.IN0
+SW[1] => m1.IN0
+SW[2] => m1.IN0
+SW[3] => m1.IN0
+SW[4] => m.IN0
+SW[5] => m.IN0
+SW[6] => m.IN0
+SW[7] => m.IN0
+SW[8] => m.IN1
+SW[8] => m.IN1
+SW[8] => m1.IN1
+SW[8] => m1.IN1
+SW[8] => m1.IN1
+SW[8] => m.IN1
+SW[8] => m1.IN1
+SW[8] => m.IN1
+SW[9] => m2.IN1
+SW[9] => m2.IN1
+SW[9] => m2.IN1
+SW[9] => m2.IN1
+LEDR[0] <= m2.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= m2.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= <GND>
+LEDR[3] <= <GND>
+LEDR[4] <= <GND>
+LEDR[5] <= <GND>
+LEDR[6] <= <GND>
+LEDR[7] <= <GND>
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
+
+

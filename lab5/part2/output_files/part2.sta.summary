@@ -1,0 +1,149 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'MAX10_CLK1_50'
+Slack : -3.179
+TNS   : -51.569
+
+Type  : Slow 1200mV 85C Model Setup 'timer:onesec|tc'
+Slack : -0.429
+TNS   : -0.916
+
+Type  : Slow 1200mV 85C Model Setup 'counter:onesplace|rollover'
+Slack : -0.403
+TNS   : -0.931
+
+Type  : Slow 1200mV 85C Model Setup 'counter:tensplace|rollover'
+Slack : -0.165
+TNS   : -0.452
+
+Type  : Slow 1200mV 85C Model Hold 'counter:onesplace|rollover'
+Slack : 0.347
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'counter:tensplace|rollover'
+Slack : 0.348
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'timer:onesec|tc'
+Slack : 0.348
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'MAX10_CLK1_50'
+Slack : 0.643
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'MAX10_CLK1_50'
+Slack : -3.000
+TNS   : -40.881
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'counter:onesplace|rollover'
+Slack : -1.403
+TNS   : -7.015
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'timer:onesec|tc'
+Slack : -1.403
+TNS   : -7.015
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'counter:tensplace|rollover'
+Slack : -1.403
+TNS   : -5.612
+
+Type  : Slow 1200mV 0C Model Setup 'MAX10_CLK1_50'
+Slack : -2.848
+TNS   : -44.798
+
+Type  : Slow 1200mV 0C Model Setup 'timer:onesec|tc'
+Slack : -0.291
+TNS   : -0.477
+
+Type  : Slow 1200mV 0C Model Setup 'counter:onesplace|rollover'
+Slack : -0.272
+TNS   : -0.488
+
+Type  : Slow 1200mV 0C Model Setup 'counter:tensplace|rollover'
+Slack : -0.065
+TNS   : -0.153
+
+Type  : Slow 1200mV 0C Model Hold 'counter:onesplace|rollover'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'counter:tensplace|rollover'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'timer:onesec|tc'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'MAX10_CLK1_50'
+Slack : 0.594
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'MAX10_CLK1_50'
+Slack : -3.000
+TNS   : -40.881
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'counter:onesplace|rollover'
+Slack : -1.403
+TNS   : -7.015
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'timer:onesec|tc'
+Slack : -1.403
+TNS   : -7.015
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'counter:tensplace|rollover'
+Slack : -1.403
+TNS   : -5.612
+
+Type  : Fast 1200mV 0C Model Setup 'MAX10_CLK1_50'
+Slack : -0.764
+TNS   : -7.132
+
+Type  : Fast 1200mV 0C Model Setup 'timer:onesec|tc'
+Slack : 0.378
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'counter:onesplace|rollover'
+Slack : 0.383
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'counter:tensplace|rollover'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'counter:onesplace|rollover'
+Slack : 0.152
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'counter:tensplace|rollover'
+Slack : 0.152
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'timer:onesec|tc'
+Slack : 0.152
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'MAX10_CLK1_50'
+Slack : 0.248
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'MAX10_CLK1_50'
+Slack : -3.000
+TNS   : -31.087
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'counter:onesplace|rollover'
+Slack : -1.000
+TNS   : -5.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'timer:onesec|tc'
+Slack : -1.000
+TNS   : -5.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'counter:tensplace|rollover'
+Slack : -1.000
+TNS   : -4.000
+
+------------------------------------------------------------

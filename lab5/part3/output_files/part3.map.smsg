@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at part3.v(14): object "code" differs only in case from object "Code" in the same scope File: C:/Users/oars0/Documents/School/Digital_Systems/lab5/part3/part3.v Line: 14
+Warning (10268): Verilog HDL information at part3.v(40): always construct contains both blocking and non-blocking assignments File: C:/Users/oars0/Documents/School/Digital_Systems/lab5/part3/part3.v Line: 40

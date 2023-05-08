@@ -1,0 +1,39 @@
+|part3
+SW[0] => clk.IN1
+SW[1] => D.IN1
+SW[2] => ~NO_FANOUT~
+SW[3] => ~NO_FANOUT~
+SW[4] => ~NO_FANOUT~
+SW[5] => ~NO_FANOUT~
+SW[6] => ~NO_FANOUT~
+SW[7] => ~NO_FANOUT~
+SW[8] => ~NO_FANOUT~
+SW[9] => ~NO_FANOUT~
+LEDR[0] << clk.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] << D.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] << gateddlatch:slave.port2
+LEDR[3] << <GND>
+LEDR[4] << <GND>
+LEDR[5] << <GND>
+LEDR[6] << <GND>
+LEDR[7] << <GND>
+LEDR[8] << <GND>
+LEDR[9] << <GND>
+
+
+|part3|gateddlatch:master
+Clk => R_g.IN1
+Clk => S_g.IN1
+D => S.DATAIN
+D => R.DATAIN
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part3|gateddlatch:slave
+Clk => R_g.IN1
+Clk => S_g.IN1
+D => S.DATAIN
+D => R.DATAIN
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+

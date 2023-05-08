@@ -1,0 +1,39 @@
+/**/
+
+
+begin: state_table
+		case (y_Q)
+			
+		endcase
+	end // state_table
+		
+		//state actions
+		case (y_Q)		
+			A: begin
+				z = 0;
+			end
+			B: begin
+				z = 0;
+			end
+			C: begin
+				z = 0;
+			end
+			D: begin
+				z = 0;
+			end
+			E: begin
+				z = 1;
+			end
+			F: begin
+				z = 0;
+			end
+			G: begin
+				z = 0;
+			end
+			H: begin
+				z = 0;
+			end
+			I: begin
+				z = 1;
+			end
+		endcase

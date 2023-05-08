@@ -1,0 +1,32 @@
+module part 1 (KEY0, SW, HEX0, HEX1);
+	
+	wire Enable, Clock, Clear;
+	wire [7:0] Q, T;
+	
+	ToggleFF TFF0 (Enable, Clock, Clear, Q[0]);
+	assign T[1] = Enable & Q[0];
+	
+	ToggleFF TFF1 (T[1], Clock, Clear, Q[1]);
+	assign T[2] = T[1] & Q[1];
+	
+	ToggleFF TFF2 (T[2], Clock, Clear, Q[2]);
+	assign T[3] = T[2] & Q[2];
+
+	ToggleFF TFF3 (T[3], Clock, Clear, Q[3]);
+	assign T[4] = T[3] & Q[3];
+	
+	ToggleFF TFF4(T[4], Clock, Clear, Q[4);
+	assign T[5] = T[4] & Q[4];
+
+endmodule
+
+module ToggleFF(T, Clock, Resetn, Q);
+	input T, Clock, Resetn;
+	output reg Q;
+	
+	always @(posedge Clock)
+		if (Resetn  == 1'b0)	// synchronous clear
+			Q <= 1'b0;
+		else if(T)
+			Q <= ~Q;
+endmodule

@@ -1,0 +1,167 @@
+|part2
+KEY0 => Clock.IN1
+SW[0] => Enable.IN1
+SW[1] => Reset.IN1
+HEX0[6] <= hex7seg:hextodisp0.port1
+HEX0[5] <= hex7seg:hextodisp0.port1
+HEX0[4] <= hex7seg:hextodisp0.port1
+HEX0[3] <= hex7seg:hextodisp0.port1
+HEX0[2] <= hex7seg:hextodisp0.port1
+HEX0[1] <= hex7seg:hextodisp0.port1
+HEX0[0] <= hex7seg:hextodisp0.port1
+HEX1[6] <= hex7seg:hextodisp1.port1
+HEX1[5] <= hex7seg:hextodisp1.port1
+HEX1[4] <= hex7seg:hextodisp1.port1
+HEX1[3] <= hex7seg:hextodisp1.port1
+HEX1[2] <= hex7seg:hextodisp1.port1
+HEX1[1] <= hex7seg:hextodisp1.port1
+HEX1[0] <= hex7seg:hextodisp1.port1
+HEX2[6] <= hex7seg:hextodisp2.port1
+HEX2[5] <= hex7seg:hextodisp2.port1
+HEX2[4] <= hex7seg:hextodisp2.port1
+HEX2[3] <= hex7seg:hextodisp2.port1
+HEX2[2] <= hex7seg:hextodisp2.port1
+HEX2[1] <= hex7seg:hextodisp2.port1
+HEX2[0] <= hex7seg:hextodisp2.port1
+HEX3[6] <= hex7seg:hextodisp3.port1
+HEX3[5] <= hex7seg:hextodisp3.port1
+HEX3[4] <= hex7seg:hextodisp3.port1
+HEX3[3] <= hex7seg:hextodisp3.port1
+HEX3[2] <= hex7seg:hextodisp3.port1
+HEX3[1] <= hex7seg:hextodisp3.port1
+HEX3[0] <= hex7seg:hextodisp3.port1
+LEDR[0] <= <GND>
+LEDR[1] <= <GND>
+LEDR[2] <= <GND>
+LEDR[3] <= <GND>
+LEDR[4] <= <GND>
+LEDR[5] <= <GND>
+LEDR[6] <= <GND>
+LEDR[7] <= <GND>
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
+
+
+|part2|counter16bit:counter
+Enable => Count.OUTPUTSELECT
+Enable => Count.OUTPUTSELECT
+Enable => Count.OUTPUTSELECT
+Enable => Count.OUTPUTSELECT
+Enable => Count.OUTPUTSELECT
+Enable => Count.OUTPUTSELECT
+Enable => Count.OUTPUTSELECT
+Enable => Count.OUTPUTSELECT
+Enable => Count.OUTPUTSELECT
+Enable => Count.OUTPUTSELECT
+Enable => Count.OUTPUTSELECT
+Enable => Count.OUTPUTSELECT
+Enable => Count.OUTPUTSELECT
+Enable => Count.OUTPUTSELECT
+Enable => Count.OUTPUTSELECT
+Enable => Count.OUTPUTSELECT
+Clock => Count[0]~reg0.CLK
+Clock => Count[1]~reg0.CLK
+Clock => Count[2]~reg0.CLK
+Clock => Count[3]~reg0.CLK
+Clock => Count[4]~reg0.CLK
+Clock => Count[5]~reg0.CLK
+Clock => Count[6]~reg0.CLK
+Clock => Count[7]~reg0.CLK
+Clock => Count[8]~reg0.CLK
+Clock => Count[9]~reg0.CLK
+Clock => Count[10]~reg0.CLK
+Clock => Count[11]~reg0.CLK
+Clock => Count[12]~reg0.CLK
+Clock => Count[13]~reg0.CLK
+Clock => Count[14]~reg0.CLK
+Clock => Count[15]~reg0.CLK
+Count[0] <= Count[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Count[1] <= Count[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Count[2] <= Count[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Count[3] <= Count[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Count[4] <= Count[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Count[5] <= Count[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Count[6] <= Count[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Count[7] <= Count[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Count[8] <= Count[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Count[9] <= Count[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Count[10] <= Count[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Count[11] <= Count[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Count[12] <= Count[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Count[13] <= Count[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Count[14] <= Count[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Count[15] <= Count[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Resetn => Count.OUTPUTSELECT
+Resetn => Count.OUTPUTSELECT
+Resetn => Count.OUTPUTSELECT
+Resetn => Count.OUTPUTSELECT
+Resetn => Count.OUTPUTSELECT
+Resetn => Count.OUTPUTSELECT
+Resetn => Count.OUTPUTSELECT
+Resetn => Count.OUTPUTSELECT
+Resetn => Count.OUTPUTSELECT
+Resetn => Count.OUTPUTSELECT
+Resetn => Count.OUTPUTSELECT
+Resetn => Count.OUTPUTSELECT
+Resetn => Count.OUTPUTSELECT
+Resetn => Count.OUTPUTSELECT
+Resetn => Count.OUTPUTSELECT
+Resetn => Count.OUTPUTSELECT
+
+
+|part2|hex7seg:hextodisp0
+hex[0] => Decoder0.IN3
+hex[1] => Decoder0.IN2
+hex[2] => Decoder0.IN1
+hex[3] => Decoder0.IN0
+display[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+display[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+display[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+display[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+display[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+display[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+display[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part2|hex7seg:hextodisp1
+hex[0] => Decoder0.IN3
+hex[1] => Decoder0.IN2
+hex[2] => Decoder0.IN1
+hex[3] => Decoder0.IN0
+display[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+display[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+display[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+display[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+display[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+display[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+display[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part2|hex7seg:hextodisp2
+hex[0] => Decoder0.IN3
+hex[1] => Decoder0.IN2
+hex[2] => Decoder0.IN1
+hex[3] => Decoder0.IN0
+display[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+display[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+display[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+display[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+display[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+display[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+display[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part2|hex7seg:hextodisp3
+hex[0] => Decoder0.IN3
+hex[1] => Decoder0.IN2
+hex[2] => Decoder0.IN1
+hex[3] => Decoder0.IN0
+display[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+display[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+display[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+display[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+display[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+display[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+display[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

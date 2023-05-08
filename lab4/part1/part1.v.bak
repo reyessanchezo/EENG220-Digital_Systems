@@ -1,0 +1,81 @@
+module part1 (KEY0, SW, HEX0, HEX1)
+
+	input KEY0;
+	input [9:0] SW;
+	output [6:0] HEX0, HEX1;
+	
+	wire enable, clock, clear;
+	wire [7:0] Q, T;
+	assign enable = SW[0];
+	assign clear = SW[1];
+	assign clock KEY0;
+	
+	ToggleFF bit0 (enable, clock, clear, Q[0]);
+	
+	assign T[0]  = Q[0] & enable; //setting the Tnext
+	ToggleFF bit1 (T[0], clock, clear, Q[1]);
+	
+	assign T[1]  = Q[1] & T[0];
+	ToggleFF bit1 (T[1], clock, clear, Q[2]);
+	
+	assign T[2]  = Q[2] & T[1];
+	ToggleFF bit1 (T[2], clock, clear, Q[3]);
+	
+	assign T[3]  = Q[3] & T[2];
+	ToggleFF bit1 (T[3], clock, clear, Q[4]);
+	
+	assign T[4] = Q[4] & T[3];
+	ToggleFF bit1 (T[4], clock, clear, Q[3]);
+	
+	assign T[5] = Q[5] & T[4];
+	ToggleFF bit1 (T[5], clock, clear, Q[5]);
+	
+	assign T[6] = Q[6] & T[5];
+	ToggleFF bit1 (T[6], clock, clear, Q[6]);
+	
+	assign T[7] = Q[7] & T[6];
+	ToggleFF bit1 (T[7], clock, clear, Q[7]);
+
+
+endmodule
+
+module ToggleFF(T, Clock, Resetn, Q);
+	input T, Clock, Resetn;
+	output reg Q;
+	
+	always @(posedge Clock) //Anytime a rising edge occurs
+		if (Resetn  == 1'b0)	// synchronous clear
+			Q <= 1'b0; //assign Q = 1'b0;
+		else if(T) //T input
+			Q <= ~Q; //Toggle Q output
+endmodule
+/*
+module hex7seg (hex, display);
+	input [3:0] hex;
+	output [0:6] display;
+
+	reg [0:6] display;
+
+	/*
+	 *       0  
+	 *      ---  
+	 *     |   |
+	 *    5|   |1
+	 *     | 6 |
+	 *      ---  
+	 *     |   |
+	 *    4|   |2
+	 *     |   |
+	 *      ---  
+	 *       3  
+	 */
+
+	always @ (hex)
+		case (hex)
+			4'h0: display = 7'b0000001;
+			4'h1: display = 7'b1001111;
+			...
+			4'hF: display = 7'b0111000;
+		endcase
+Endmodule
+*/

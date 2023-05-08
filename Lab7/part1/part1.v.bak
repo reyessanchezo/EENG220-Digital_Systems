@@ -1,0 +1,5 @@
+/*
+Oscar Reyes-Sanchez
+Digital Systems
+Finite-State Machine that sets z to 1 whenever the w input is constant for four or more clock pulses
+*/

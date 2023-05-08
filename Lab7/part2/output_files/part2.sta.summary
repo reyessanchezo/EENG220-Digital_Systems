@@ -1,0 +1,77 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'MAX10_CLK1_50'
+Slack : -4.052
+TNS   : -45.672
+
+Type  : Slow 1200mV 85C Model Setup 'button_debouncer:db|data_out'
+Slack : -0.763
+TNS   : -3.519
+
+Type  : Slow 1200mV 85C Model Hold 'MAX10_CLK1_50'
+Slack : 0.435
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'button_debouncer:db|data_out'
+Slack : 0.710
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'MAX10_CLK1_50'
+Slack : -3.000
+TNS   : -39.478
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'button_debouncer:db|data_out'
+Slack : -1.403
+TNS   : -7.015
+
+Type  : Slow 1200mV 0C Model Setup 'MAX10_CLK1_50'
+Slack : -3.683
+TNS   : -39.588
+
+Type  : Slow 1200mV 0C Model Setup 'button_debouncer:db|data_out'
+Slack : -0.613
+TNS   : -2.792
+
+Type  : Slow 1200mV 0C Model Hold 'MAX10_CLK1_50'
+Slack : 0.399
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'button_debouncer:db|data_out'
+Slack : 0.657
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'MAX10_CLK1_50'
+Slack : -3.000
+TNS   : -39.478
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'button_debouncer:db|data_out'
+Slack : -1.403
+TNS   : -7.015
+
+Type  : Fast 1200mV 0C Model Setup 'MAX10_CLK1_50'
+Slack : -1.243
+TNS   : -6.543
+
+Type  : Fast 1200mV 0C Model Setup 'button_debouncer:db|data_out'
+Slack : 0.267
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'MAX10_CLK1_50'
+Slack : 0.165
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'button_debouncer:db|data_out'
+Slack : 0.281
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'MAX10_CLK1_50'
+Slack : -3.000
+TNS   : -29.921
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'button_debouncer:db|data_out'
+Slack : -1.000
+TNS   : -5.000
+
+------------------------------------------------------------

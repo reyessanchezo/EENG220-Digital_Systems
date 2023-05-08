@@ -1,0 +1,237 @@
+|part5
+SW[0] => ~NO_FANOUT~
+SW[1] => ~NO_FANOUT~
+SW[2] => ~NO_FANOUT~
+SW[3] => ~NO_FANOUT~
+SW[4] => ~NO_FANOUT~
+SW[5] => ~NO_FANOUT~
+SW[6] => ~NO_FANOUT~
+SW[7] => ~NO_FANOUT~
+SW[8] => SW[8].IN4
+SW[9] => SW[9].IN4
+LEDR[0] <= <GND>
+LEDR[1] <= <GND>
+LEDR[2] <= <GND>
+LEDR[3] <= <GND>
+LEDR[4] <= <GND>
+LEDR[5] <= <GND>
+LEDR[6] <= <GND>
+LEDR[7] <= <GND>
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
+HEX0[0] <= decoder:comb_28.port1
+HEX0[1] <= decoder:comb_28.port1
+HEX0[2] <= decoder:comb_28.port1
+HEX0[3] <= decoder:comb_28.port1
+HEX0[4] <= decoder:comb_28.port1
+HEX0[5] <= decoder:comb_28.port1
+HEX0[6] <= decoder:comb_28.port1
+HEX1[0] <= decoder:comb_27.port1
+HEX1[1] <= decoder:comb_27.port1
+HEX1[2] <= decoder:comb_27.port1
+HEX1[3] <= decoder:comb_27.port1
+HEX1[4] <= decoder:comb_27.port1
+HEX1[5] <= decoder:comb_27.port1
+HEX1[6] <= decoder:comb_27.port1
+HEX2[0] <= decoder:comb_26.port1
+HEX2[1] <= decoder:comb_26.port1
+HEX2[2] <= decoder:comb_26.port1
+HEX2[3] <= decoder:comb_26.port1
+HEX2[4] <= decoder:comb_26.port1
+HEX2[5] <= decoder:comb_26.port1
+HEX2[6] <= decoder:comb_26.port1
+HEX3[0] <= decoder:comb_25.port1
+HEX3[1] <= decoder:comb_25.port1
+HEX3[2] <= decoder:comb_25.port1
+HEX3[3] <= decoder:comb_25.port1
+HEX3[4] <= decoder:comb_25.port1
+HEX3[5] <= decoder:comb_25.port1
+HEX3[6] <= decoder:comb_25.port1
+HEX4[0] <= <VCC>
+HEX4[1] <= <VCC>
+HEX4[2] <= <VCC>
+HEX4[3] <= <VCC>
+HEX4[4] <= <VCC>
+HEX4[5] <= <VCC>
+HEX4[6] <= <VCC>
+HEX5[0] <= <VCC>
+HEX5[1] <= <VCC>
+HEX5[2] <= <VCC>
+HEX5[3] <= <VCC>
+HEX5[4] <= <VCC>
+HEX5[5] <= <VCC>
+HEX5[6] <= <VCC>
+u[0] <= u[0].DB_MAX_OUTPUT_PORT_TYPE
+u[1] <= u[1].DB_MAX_OUTPUT_PORT_TYPE
+v[0] <= v[0].DB_MAX_OUTPUT_PORT_TYPE
+v[1] <= v[1].DB_MAX_OUTPUT_PORT_TYPE
+w[0] <= w[0].DB_MAX_OUTPUT_PORT_TYPE
+w[1] <= w[1].DB_MAX_OUTPUT_PORT_TYPE
+x[0] <= x[0].DB_MAX_OUTPUT_PORT_TYPE
+x[1] <= x[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part5|mux_2bit_4to1:mux0
+s[0] => m0.IN0
+s[0] => m0.IN0
+s[0] => m1.IN0
+s[0] => m1.IN0
+s[0] => m1.IN0
+s[0] => m0.IN0
+s[0] => m1.IN0
+s[0] => m0.IN0
+s[1] => M.IN1
+s[1] => M.IN1
+s[1] => M.IN1
+s[1] => M.IN1
+u[0] => m0.IN1
+u[1] => m0.IN1
+v[0] => m0.IN1
+v[1] => m0.IN1
+w[0] => m1.IN1
+w[1] => m1.IN1
+x[0] => m1.IN1
+x[1] => m1.IN1
+M[0] <= M.DB_MAX_OUTPUT_PORT_TYPE
+M[1] <= M.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part5|decoder:comb_25
+c[0] => disp.IN0
+c[0] => disp.IN0
+c[0] => disp.IN0
+c[1] => disp.IN1
+c[1] => disp.IN1
+c[1] => disp.IN1
+disp[0] <= disp.DB_MAX_OUTPUT_PORT_TYPE
+disp[1] <= disp.DB_MAX_OUTPUT_PORT_TYPE
+disp[2] <= disp.DB_MAX_OUTPUT_PORT_TYPE
+disp[3] <= disp.DB_MAX_OUTPUT_PORT_TYPE
+disp[4] <= <GND>
+disp[5] <= disp.DB_MAX_OUTPUT_PORT_TYPE
+disp[6] <= <GND>
+
+
+|part5|mux_2bit_4to1:mux1
+s[0] => m0.IN0
+s[0] => m0.IN0
+s[0] => m1.IN0
+s[0] => m1.IN0
+s[0] => m1.IN0
+s[0] => m0.IN0
+s[0] => m1.IN0
+s[0] => m0.IN0
+s[1] => M.IN1
+s[1] => M.IN1
+s[1] => M.IN1
+s[1] => M.IN1
+u[0] => m0.IN1
+u[1] => m0.IN1
+v[0] => m0.IN1
+v[1] => m0.IN1
+w[0] => m1.IN1
+w[1] => m1.IN1
+x[0] => m1.IN1
+x[1] => m1.IN1
+M[0] <= M.DB_MAX_OUTPUT_PORT_TYPE
+M[1] <= M.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part5|decoder:comb_26
+c[0] => disp.IN0
+c[0] => disp.IN0
+c[0] => disp.IN0
+c[1] => disp.IN1
+c[1] => disp.IN1
+c[1] => disp.IN1
+disp[0] <= disp.DB_MAX_OUTPUT_PORT_TYPE
+disp[1] <= disp.DB_MAX_OUTPUT_PORT_TYPE
+disp[2] <= disp.DB_MAX_OUTPUT_PORT_TYPE
+disp[3] <= disp.DB_MAX_OUTPUT_PORT_TYPE
+disp[4] <= <GND>
+disp[5] <= disp.DB_MAX_OUTPUT_PORT_TYPE
+disp[6] <= <GND>
+
+
+|part5|mux_2bit_4to1:mux2
+s[0] => m0.IN0
+s[0] => m0.IN0
+s[0] => m1.IN0
+s[0] => m1.IN0
+s[0] => m1.IN0
+s[0] => m0.IN0
+s[0] => m1.IN0
+s[0] => m0.IN0
+s[1] => M.IN1
+s[1] => M.IN1
+s[1] => M.IN1
+s[1] => M.IN1
+u[0] => m0.IN1
+u[1] => m0.IN1
+v[0] => m0.IN1
+v[1] => m0.IN1
+w[0] => m1.IN1
+w[1] => m1.IN1
+x[0] => m1.IN1
+x[1] => m1.IN1
+M[0] <= M.DB_MAX_OUTPUT_PORT_TYPE
+M[1] <= M.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part5|decoder:comb_27
+c[0] => disp.IN0
+c[0] => disp.IN0
+c[0] => disp.IN0
+c[1] => disp.IN1
+c[1] => disp.IN1
+c[1] => disp.IN1
+disp[0] <= disp.DB_MAX_OUTPUT_PORT_TYPE
+disp[1] <= disp.DB_MAX_OUTPUT_PORT_TYPE
+disp[2] <= disp.DB_MAX_OUTPUT_PORT_TYPE
+disp[3] <= disp.DB_MAX_OUTPUT_PORT_TYPE
+disp[4] <= <GND>
+disp[5] <= disp.DB_MAX_OUTPUT_PORT_TYPE
+disp[6] <= <GND>
+
+
+|part5|mux_2bit_4to1:mux3
+s[0] => m0.IN0
+s[0] => m0.IN0
+s[0] => m1.IN0
+s[0] => m1.IN0
+s[0] => m1.IN0
+s[0] => m0.IN0
+s[0] => m1.IN0
+s[0] => m0.IN0
+s[1] => M.IN1
+s[1] => M.IN1
+s[1] => M.IN1
+s[1] => M.IN1
+u[0] => m0.IN1
+u[1] => m0.IN1
+v[0] => m0.IN1
+v[1] => m0.IN1
+w[0] => m1.IN1
+w[1] => m1.IN1
+x[0] => m1.IN1
+x[1] => m1.IN1
+M[0] <= M.DB_MAX_OUTPUT_PORT_TYPE
+M[1] <= M.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part5|decoder:comb_28
+c[0] => disp.IN0
+c[0] => disp.IN0
+c[0] => disp.IN0
+c[1] => disp.IN1
+c[1] => disp.IN1
+c[1] => disp.IN1
+disp[0] <= disp.DB_MAX_OUTPUT_PORT_TYPE
+disp[1] <= disp.DB_MAX_OUTPUT_PORT_TYPE
+disp[2] <= disp.DB_MAX_OUTPUT_PORT_TYPE
+disp[3] <= disp.DB_MAX_OUTPUT_PORT_TYPE
+disp[4] <= <GND>
+disp[5] <= disp.DB_MAX_OUTPUT_PORT_TYPE
+disp[6] <= <GND>
+
+

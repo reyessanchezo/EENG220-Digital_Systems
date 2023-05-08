@@ -1,0 +1,25 @@
+module part3 ();
+endmodule
+
+//Timer module that ticks once per hundredth of a second
+module timer (Clock, Reset_n, tc);
+	parameter n = 20;
+	
+	input Clock, Reset_n;
+	reg [n-1:0] Q;
+	output reg tc; //terminal count, used to trigger next counter
+		
+	always @(posedge Clock) //reset after 1 second
+		begin
+		if (Q == 20'b01111010000100100000) 
+				begin
+				Q <= 1'd0;
+				tc <= 1'b1;
+				end
+			else
+				begin
+				Q <= Q + 1'b1;
+				tc <= 1'b0;
+				end
+		end
+endmodule

@@ -1,0 +1,7 @@
+/*
+Oscar Reyes-Sanchez
+Digital Systems
+Same FSM as part 1, built using different code
+*/
+
+module part2 ()

@@ -1,0 +1,56 @@
+m255
+K4
+z2
+!s11f vlog 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/oars0/Documents/School/Digital_Systems/QuestaSetup
+vAddern
+Z1 !s110 1675262105
+!i10b 1
+!s100 hiIJKXBn^<5G>]`^YZ>zK1
+IR<oLeP8147GleKC7<Zg5n2
+R0
+Z2 w1675261620
+8C:/Users/oars0/Documents/School/Digital_Systems/QuestaSetup/design_files/Addern/Addern.v
+FC:/Users/oars0/Documents/School/Digital_Systems/QuestaSetup/design_files/Addern/Addern.v
+!i122 0
+L0 2 10
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 OL;L;2021.2;73
+r1
+!s85 0
+31
+Z5 !s108 1675262105.000000
+!s107 C:/Users/oars0/Documents/School/Digital_Systems/QuestaSetup/design_files/Addern/Addern.v|
+!s90 -reportprogress|300|-work|Testbench|-vopt|-stats=none|C:/Users/oars0/Documents/School/Digital_Systems/QuestaSetup/design_files/Addern/Addern.v|
+!i113 0
+Z6 o-work Testbench -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z7 tCvgOpt 0
+n@addern
+vtestbench
+R1
+!i10b 1
+!s100 STNVc;9abGHLR7lV<HNS^2
+Iia4<folNoHZNBHHcm<l7z1
+R0
+R2
+8C:/Users/oars0/Documents/School/Digital_Systems/QuestaSetup/design_files/Addern/Questa/testbench.v
+FC:/Users/oars0/Documents/School/Digital_Systems/QuestaSetup/design_files/Addern/Questa/testbench.v
+!i122 1
+L0 3 22
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/oars0/Documents/School/Digital_Systems/QuestaSetup/design_files/Addern/Questa/testbench.v|
+!s90 -reportprogress|300|-work|Testbench|-vopt|-stats=none|C:/Users/oars0/Documents/School/Digital_Systems/QuestaSetup/design_files/Addern/Questa/testbench.v|
+!i113 0
+R6
+R7

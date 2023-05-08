@@ -1,0 +1,103 @@
+|part1
+KEY0 => KEY0.IN1
+KEY1 => _.IN1
+LEDR[0] <= counter:ZeroToK.port2
+LEDR[1] <= counter:ZeroToK.port2
+LEDR[2] <= counter:ZeroToK.port2
+LEDR[3] <= counter:ZeroToK.port2
+LEDR[4] <= counter:ZeroToK.port2
+LEDR[5] <= counter:ZeroToK.port2
+LEDR[6] <= counter:ZeroToK.port2
+LEDR[7] <= counter:ZeroToK.port2
+LEDR[8] <= <GND>
+LEDR[9] <= counter:ZeroToK.port3
+MAX10_CLK1_50 => MAX10_CLK1_50.IN1
+
+
+|part1|button_debouncer:db
+clk => data_in_3.CLK
+clk => data_in_2.CLK
+clk => data_in_1.CLK
+clk => data_in_0.CLK
+clk => counter[0].CLK
+clk => counter[1].CLK
+clk => counter[2].CLK
+clk => counter[3].CLK
+clk => counter[4].CLK
+clk => counter[5].CLK
+clk => counter[6].CLK
+clk => counter[7].CLK
+clk => counter[8].CLK
+clk => counter[9].CLK
+clk => counter[10].CLK
+clk => counter[11].CLK
+clk => counter[12].CLK
+clk => counter[13].CLK
+clk => counter[14].CLK
+clk => counter[15].CLK
+clk => counter[16].CLK
+clk => counter[17].CLK
+clk => counter[18].CLK
+clk => counter[19].CLK
+clk => counter[20].CLK
+clk => data_out~reg0.CLK
+rst_n => data_in_3.ACLR
+rst_n => data_in_2.ACLR
+rst_n => data_in_1.ACLR
+rst_n => data_in_0.ACLR
+rst_n => counter[0].ACLR
+rst_n => counter[1].ACLR
+rst_n => counter[2].ACLR
+rst_n => counter[3].ACLR
+rst_n => counter[4].ACLR
+rst_n => counter[5].PRESET
+rst_n => counter[6].ACLR
+rst_n => counter[7].PRESET
+rst_n => counter[8].ACLR
+rst_n => counter[9].PRESET
+rst_n => counter[10].PRESET
+rst_n => counter[11].ACLR
+rst_n => counter[12].ACLR
+rst_n => counter[13].ACLR
+rst_n => counter[14].ACLR
+rst_n => counter[15].PRESET
+rst_n => counter[16].PRESET
+rst_n => counter[17].ACLR
+rst_n => counter[18].ACLR
+rst_n => counter[19].ACLR
+rst_n => counter[20].ACLR
+rst_n => data_out~reg0.ACLR
+data_in => data_in_0.DATAIN
+data_out <= data_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|counter:ZeroToK
+Clock => rollover~reg0.CLK
+Clock => Q[0]~reg0.CLK
+Clock => Q[1]~reg0.CLK
+Clock => Q[2]~reg0.CLK
+Clock => Q[3]~reg0.CLK
+Clock => Q[4]~reg0.CLK
+Clock => Q[5]~reg0.CLK
+Clock => Q[6]~reg0.CLK
+Clock => Q[7]~reg0.CLK
+Reset_n => Q[0]~reg0.ACLR
+Reset_n => Q[1]~reg0.ACLR
+Reset_n => Q[2]~reg0.ACLR
+Reset_n => Q[3]~reg0.ACLR
+Reset_n => Q[4]~reg0.ACLR
+Reset_n => Q[5]~reg0.ACLR
+Reset_n => Q[6]~reg0.ACLR
+Reset_n => Q[7]~reg0.ACLR
+Reset_n => rollover~reg0.ENA
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rollover <= rollover~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

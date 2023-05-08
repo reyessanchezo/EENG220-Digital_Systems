@@ -1,0 +1,658 @@
+Analysis & Synthesis report for VendingMachine
+Thu Dec  8 15:06:21 2022
+Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |VendingMachine|pulseFSM:motor2|y_Q
+  9. State Machine - |VendingMachine|pulseFSM:motor1|y_Q
+ 10. State Machine - |VendingMachine|FSM1:mainFSM|y_Q
+ 11. Registers Removed During Synthesis
+ 12. General Register Statistics
+ 13. Parameter Settings for User Entity Instance: button_debouncer:key0db
+ 14. Parameter Settings for User Entity Instance: button_debouncer:key1db
+ 15. Parameter Settings for User Entity Instance: button_debouncer:key2db
+ 16. Parameter Settings for User Entity Instance: button_debouncer:key3db
+ 17. Parameter Settings for User Entity Instance: FSM1:mainFSM
+ 18. Parameter Settings for User Entity Instance: pulseFSM:motor1
+ 19. Parameter Settings for User Entity Instance: pulseFSM:motor2
+ 20. Parameter Settings for User Entity Instance: timer:mpulse
+ 21. Port Connectivity Checks: "timer:mpulse"
+ 22. Port Connectivity Checks: "button_debouncer:key3db"
+ 23. Port Connectivity Checks: "button_debouncer:key2db"
+ 24. Port Connectivity Checks: "button_debouncer:key1db"
+ 25. Port Connectivity Checks: "button_debouncer:key0db"
+ 26. Post-Synthesis Netlist Statistics for Top Partition
+ 27. Elapsed Time Per Partition
+ 28. Analysis & Synthesis Messages
+ 29. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2022  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Dec  8 15:06:21 2022       ;
+; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
+; Revision Name                      ; VendingMachine                              ;
+; Top-level Entity Name              ; VendingMachine                              ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 250                                         ;
+;     Total combinational functions  ; 235                                         ;
+;     Dedicated logic registers      ; 136                                         ;
+; Total registers                    ; 136                                         ;
+; Total pins                         ; 81                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C7G     ;                    ;
+; Top-level entity name                                            ; VendingMachine     ; VendingMachine     ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-6         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                  ; Library ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------+---------+
+; VendingMachine.v                 ; yes             ; User Verilog HDL File  ; C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v ;         ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                   ;
++---------------------------------------------+-----------------+
+; Resource                                    ; Usage           ;
++---------------------------------------------+-----------------+
+; Estimated Total logic elements              ; 250             ;
+;                                             ;                 ;
+; Total combinational functions               ; 235             ;
+; Logic element usage by number of LUT inputs ;                 ;
+;     -- 4 input functions                    ; 111             ;
+;     -- 3 input functions                    ; 8               ;
+;     -- <=2 input functions                  ; 116             ;
+;                                             ;                 ;
+; Logic elements by mode                      ;                 ;
+;     -- normal mode                          ; 140             ;
+;     -- arithmetic mode                      ; 95              ;
+;                                             ;                 ;
+; Total registers                             ; 136             ;
+;     -- Dedicated logic registers            ; 136             ;
+;     -- I/O registers                        ; 0               ;
+;                                             ;                 ;
+; I/O pins                                    ; 81              ;
+;                                             ;                 ;
+; Embedded Multiplier 9-bit elements          ; 0               ;
+;                                             ;                 ;
+; Maximum fan-out node                        ; timer:mpulse|tc ;
+; Maximum fan-out                             ; 73              ;
+; Total fan-out                               ; 1098            ;
+; Average fan-out                             ; 2.00            ;
++---------------------------------------------+-----------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                           ;
++------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------+------------------+--------------+
+; Compilation Hierarchy Node   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                     ; Entity Name      ; Library Name ;
++------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------+------------------+--------------+
+; |VendingMachine              ; 235 (0)             ; 136 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 81   ; 0            ; 0          ; |VendingMachine                         ; VendingMachine   ; work         ;
+;    |FSM1:mainFSM|            ; 22 (22)             ; 13 (13)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|FSM1:mainFSM            ; FSM1             ; work         ;
+;    |button_debouncer:key0db| ; 37 (37)             ; 26 (26)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|button_debouncer:key0db ; button_debouncer ; work         ;
+;    |button_debouncer:key1db| ; 1 (1)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|button_debouncer:key1db ; button_debouncer ; work         ;
+;    |button_debouncer:key2db| ; 8 (8)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|button_debouncer:key2db ; button_debouncer ; work         ;
+;    |pulseFSM:motor1|         ; 62 (62)             ; 30 (30)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|pulseFSM:motor1         ; pulseFSM         ; work         ;
+;    |pulseFSM:motor2|         ; 62 (62)             ; 30 (30)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|pulseFSM:motor2         ; pulseFSM         ; work         ;
+;    |timer:mpulse|            ; 43 (43)             ; 27 (27)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|timer:mpulse            ; timer            ; work         ;
++------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------+------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------+
+; State Machine - |VendingMachine|pulseFSM:motor2|y_Q ;
++------------+----------+------------+----------------+
+; Name       ; y_Q.Wait ; y_Q.pinOFF ; y_Q.pinON      ;
++------------+----------+------------+----------------+
+; y_Q.Wait   ; 0        ; 0          ; 0              ;
+; y_Q.pinON  ; 1        ; 0          ; 1              ;
+; y_Q.pinOFF ; 1        ; 1          ; 0              ;
++------------+----------+------------+----------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------+
+; State Machine - |VendingMachine|pulseFSM:motor1|y_Q ;
++------------+----------+------------+----------------+
+; Name       ; y_Q.Wait ; y_Q.pinOFF ; y_Q.pinON      ;
++------------+----------+------------+----------------+
+; y_Q.Wait   ; 0        ; 0          ; 0              ;
+; y_Q.pinON  ; 1        ; 0          ; 1              ;
+; y_Q.pinOFF ; 1        ; 1          ; 0              ;
++------------+----------+------------+----------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |VendingMachine|FSM1:mainFSM|y_Q                                                                                ;
++--------------------+------------------+--------------------+------------+------------+-----------------+------------+-----------+
+; Name               ; y_Q.CreditsMinus ; y_Q.DisplayCredits ; y_Q.Motor2 ; y_Q.Motor1 ; y_Q.SnackSelect ; y_Q.CodeIn ; y_Q.Reset ;
++--------------------+------------------+--------------------+------------+------------+-----------------+------------+-----------+
+; y_Q.Reset          ; 0                ; 0                  ; 0          ; 0          ; 0               ; 0          ; 0         ;
+; y_Q.CodeIn         ; 0                ; 0                  ; 0          ; 0          ; 0               ; 1          ; 1         ;
+; y_Q.SnackSelect    ; 0                ; 0                  ; 0          ; 0          ; 1               ; 0          ; 1         ;
+; y_Q.Motor1         ; 0                ; 0                  ; 0          ; 1          ; 0               ; 0          ; 1         ;
+; y_Q.Motor2         ; 0                ; 0                  ; 1          ; 0          ; 0               ; 0          ; 1         ;
+; y_Q.DisplayCredits ; 0                ; 1                  ; 0          ; 0          ; 0               ; 0          ; 1         ;
+; y_Q.CreditsMinus   ; 1                ; 0                  ; 0          ; 0          ; 0               ; 0          ; 1         ;
++--------------------+------------------+--------------------+------------+------------+-----------------+------------+-----------+
+
+
++------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                       ;
++----------------------------------------+-------------------------------------------------+
+; Register name                          ; Reason for Removal                              ;
++----------------------------------------+-------------------------------------------------+
+; FSM1:mainFSM|HEX0[1]                   ; Stuck at VCC due to stuck port data_in          ;
+; FSM1:mainFSM|HEX1[0,5]                 ; Stuck at VCC due to stuck port data_in          ;
+; FSM1:mainFSM|HEX2[0,1,5]               ; Stuck at VCC due to stuck port data_in          ;
+; FSM1:mainFSM|HEX3[1]                   ; Stuck at VCC due to stuck port data_in          ;
+; FSM1:mainFSM|HEX4[0..6]                ; Stuck at VCC due to stuck port data_in          ;
+; FSM1:mainFSM|HEX5[3]                   ; Stuck at VCC due to stuck port data_in          ;
+; FSM1:mainFSM|HEX0[4..6]                ; Merged with FSM1:mainFSM|HEX0[3]                ;
+; FSM1:mainFSM|HEX2[4,6]                 ; Merged with FSM1:mainFSM|HEX0[3]                ;
+; FSM1:mainFSM|HEX3[3,4]                 ; Merged with FSM1:mainFSM|HEX0[3]                ;
+; FSM1:mainFSM|HEX3[2,6]                 ; Merged with FSM1:mainFSM|HEX0[2]                ;
+; FSM1:mainFSM|HEX5[0..2,4..6]           ; Merged with FSM1:mainFSM|HEX0[2]                ;
+; FSM1:mainFSM|HEX1[1..4,6]              ; Merged with FSM1:mainFSM|HEX0[0]                ;
+; FSM1:mainFSM|HEX2[2,3]                 ; Merged with FSM1:mainFSM|HEX0[0]                ;
+; FSM1:mainFSM|HEX3[0,5]                 ; Merged with FSM1:mainFSM|HEX0[0]                ;
+; button_debouncer:key1db|counter[20]    ; Merged with button_debouncer:key0db|counter[20] ;
+; button_debouncer:key2db|counter[20]    ; Merged with button_debouncer:key0db|counter[20] ;
+; button_debouncer:key1db|counter[19]    ; Merged with button_debouncer:key0db|counter[19] ;
+; button_debouncer:key2db|counter[19]    ; Merged with button_debouncer:key0db|counter[19] ;
+; button_debouncer:key1db|counter[18]    ; Merged with button_debouncer:key0db|counter[18] ;
+; button_debouncer:key2db|counter[18]    ; Merged with button_debouncer:key0db|counter[18] ;
+; button_debouncer:key1db|counter[17]    ; Merged with button_debouncer:key0db|counter[17] ;
+; button_debouncer:key2db|counter[17]    ; Merged with button_debouncer:key0db|counter[17] ;
+; button_debouncer:key1db|counter[16]    ; Merged with button_debouncer:key0db|counter[16] ;
+; button_debouncer:key2db|counter[16]    ; Merged with button_debouncer:key0db|counter[16] ;
+; button_debouncer:key1db|counter[15]    ; Merged with button_debouncer:key0db|counter[15] ;
+; button_debouncer:key2db|counter[15]    ; Merged with button_debouncer:key0db|counter[15] ;
+; button_debouncer:key1db|counter[14]    ; Merged with button_debouncer:key0db|counter[14] ;
+; button_debouncer:key2db|counter[14]    ; Merged with button_debouncer:key0db|counter[14] ;
+; button_debouncer:key1db|counter[13]    ; Merged with button_debouncer:key0db|counter[13] ;
+; button_debouncer:key2db|counter[13]    ; Merged with button_debouncer:key0db|counter[13] ;
+; button_debouncer:key1db|counter[12]    ; Merged with button_debouncer:key0db|counter[12] ;
+; button_debouncer:key2db|counter[12]    ; Merged with button_debouncer:key0db|counter[12] ;
+; button_debouncer:key1db|counter[11]    ; Merged with button_debouncer:key0db|counter[11] ;
+; button_debouncer:key2db|counter[11]    ; Merged with button_debouncer:key0db|counter[11] ;
+; button_debouncer:key1db|counter[10]    ; Merged with button_debouncer:key0db|counter[10] ;
+; button_debouncer:key2db|counter[10]    ; Merged with button_debouncer:key0db|counter[10] ;
+; button_debouncer:key1db|counter[9]     ; Merged with button_debouncer:key0db|counter[9]  ;
+; button_debouncer:key2db|counter[9]     ; Merged with button_debouncer:key0db|counter[9]  ;
+; button_debouncer:key1db|counter[8]     ; Merged with button_debouncer:key0db|counter[8]  ;
+; button_debouncer:key2db|counter[8]     ; Merged with button_debouncer:key0db|counter[8]  ;
+; button_debouncer:key1db|counter[7]     ; Merged with button_debouncer:key0db|counter[7]  ;
+; button_debouncer:key2db|counter[7]     ; Merged with button_debouncer:key0db|counter[7]  ;
+; button_debouncer:key1db|counter[6]     ; Merged with button_debouncer:key0db|counter[6]  ;
+; button_debouncer:key2db|counter[6]     ; Merged with button_debouncer:key0db|counter[6]  ;
+; button_debouncer:key1db|counter[5]     ; Merged with button_debouncer:key0db|counter[5]  ;
+; button_debouncer:key2db|counter[5]     ; Merged with button_debouncer:key0db|counter[5]  ;
+; button_debouncer:key1db|counter[4]     ; Merged with button_debouncer:key0db|counter[4]  ;
+; button_debouncer:key2db|counter[4]     ; Merged with button_debouncer:key0db|counter[4]  ;
+; button_debouncer:key1db|counter[3]     ; Merged with button_debouncer:key0db|counter[3]  ;
+; button_debouncer:key2db|counter[3]     ; Merged with button_debouncer:key0db|counter[3]  ;
+; button_debouncer:key1db|counter[2]     ; Merged with button_debouncer:key0db|counter[2]  ;
+; button_debouncer:key2db|counter[2]     ; Merged with button_debouncer:key0db|counter[2]  ;
+; button_debouncer:key1db|counter[1]     ; Merged with button_debouncer:key0db|counter[1]  ;
+; button_debouncer:key2db|counter[1]     ; Merged with button_debouncer:key0db|counter[1]  ;
+; button_debouncer:key1db|counter[0]     ; Merged with button_debouncer:key0db|counter[0]  ;
+; button_debouncer:key2db|counter[0]     ; Merged with button_debouncer:key0db|counter[0]  ;
+; pulseFSM:motor2|y_Q~4                  ; Lost fanout                                     ;
+; pulseFSM:motor1|y_Q~4                  ; Lost fanout                                     ;
+; FSM1:mainFSM|y_Q~4                     ; Lost fanout                                     ;
+; FSM1:mainFSM|y_Q~5                     ; Lost fanout                                     ;
+; FSM1:mainFSM|y_Q~6                     ; Lost fanout                                     ;
+; FSM1:mainFSM|y_Q~7                     ; Lost fanout                                     ;
+; pulseFSM:motor2|y_Q.pinON              ; Merged with pulseFSM:motor2|pulse               ;
+; pulseFSM:motor1|y_Q.pinON              ; Merged with pulseFSM:motor1|pulse               ;
+; Total Number of Removed Registers = 89 ;                                                 ;
++----------------------------------------+-------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 136   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 3     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: button_debouncer:key0db ;
++----------------+--------+--------------------------------------------+
+; Parameter Name ; Value  ; Type                                       ;
++----------------+--------+--------------------------------------------+
+; preset_val     ; 0      ; Signed Integer                             ;
+; counter_max    ; 100000 ; Signed Integer                             ;
++----------------+--------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: button_debouncer:key1db ;
++----------------+--------+--------------------------------------------+
+; Parameter Name ; Value  ; Type                                       ;
++----------------+--------+--------------------------------------------+
+; preset_val     ; 0      ; Signed Integer                             ;
+; counter_max    ; 100000 ; Signed Integer                             ;
++----------------+--------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: button_debouncer:key2db ;
++----------------+--------+--------------------------------------------+
+; Parameter Name ; Value  ; Type                                       ;
++----------------+--------+--------------------------------------------+
+; preset_val     ; 0      ; Signed Integer                             ;
+; counter_max    ; 100000 ; Signed Integer                             ;
++----------------+--------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: button_debouncer:key3db ;
++----------------+--------+--------------------------------------------+
+; Parameter Name ; Value  ; Type                                       ;
++----------------+--------+--------------------------------------------+
+; preset_val     ; 0      ; Signed Integer                             ;
+; counter_max    ; 100000 ; Signed Integer                             ;
++----------------+--------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FSM1:mainFSM ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; Reset          ; 0000  ; Unsigned Binary                  ;
+; CodeIn         ; 0001  ; Unsigned Binary                  ;
+; SnackSelect    ; 0010  ; Unsigned Binary                  ;
+; Motor1         ; 0011  ; Unsigned Binary                  ;
+; Motor2         ; 0100  ; Unsigned Binary                  ;
+; DisplayCredits ; 0101  ; Unsigned Binary                  ;
+; CreditsMinus   ; 0110  ; Unsigned Binary                  ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: pulseFSM:motor1 ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; Wait           ; 00    ; Unsigned Binary                     ;
+; pinON          ; 01    ; Unsigned Binary                     ;
+; pinOFF         ; 10    ; Unsigned Binary                     ;
+; num            ; 1010  ; Unsigned Binary                     ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: pulseFSM:motor2 ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; Wait           ; 00    ; Unsigned Binary                     ;
+; pinON          ; 01    ; Unsigned Binary                     ;
+; pinOFF         ; 10    ; Unsigned Binary                     ;
+; num            ; 1011  ; Unsigned Binary                     ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: timer:mpulse ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; n              ; 26    ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "timer:mpulse"                                                                                                                                                                            ;
++-------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Reset_n     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; Reset_n[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; resume      ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; resume[-1]  ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "button_debouncer:key3db" ;
++-------+-------+----------+--------------------------+
+; Port  ; Type  ; Severity ; Details                  ;
++-------+-------+----------+--------------------------+
+; rst_n ; Input ; Info     ; Stuck at VCC             ;
++-------+-------+----------+--------------------------+
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "button_debouncer:key2db" ;
++-------+-------+----------+--------------------------+
+; Port  ; Type  ; Severity ; Details                  ;
++-------+-------+----------+--------------------------+
+; rst_n ; Input ; Info     ; Stuck at VCC             ;
++-------+-------+----------+--------------------------+
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "button_debouncer:key1db" ;
++-------+-------+----------+--------------------------+
+; Port  ; Type  ; Severity ; Details                  ;
++-------+-------+----------+--------------------------+
+; rst_n ; Input ; Info     ; Stuck at VCC             ;
++-------+-------+----------+--------------------------+
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "button_debouncer:key0db" ;
++-------+-------+----------+--------------------------+
+; Port  ; Type  ; Severity ; Details                  ;
++-------+-------+----------+--------------------------+
+; rst_n ; Input ; Info     ; Stuck at VCC             ;
++-------+-------+----------+--------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 81                          ;
+; cycloneiii_ff         ; 136                         ;
+;     ENA               ; 3                           ;
+;     plain             ; 133                         ;
+; cycloneiii_io_obuf    ; 16                          ;
+; cycloneiii_lcell_comb ; 237                         ;
+;     arith             ; 95                          ;
+;         2 data inputs ; 95                          ;
+;     normal            ; 142                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 9                           ;
+;         2 data inputs ; 12                          ;
+;         3 data inputs ; 8                           ;
+;         4 data inputs ; 111                         ;
+;                       ;                             ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 3.52                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+    Info: Processing started: Thu Dec  8 15:06:15 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VendingMachine -c VendingMachine
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20032): Parallel compilation is enabled and will use up to 6 processors
+Info (12021): Found 6 design units, including 6 entities, in source file vendingmachine.v
+    Info (12023): Found entity 1: VendingMachine File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 8
+    Info (12023): Found entity 2: pulseFSM File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 108
+    Info (12023): Found entity 3: timer File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 158
+    Info (12023): Found entity 4: FSM1 File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 183
+    Info (12023): Found entity 5: hex7seg File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 302
+    Info (12023): Found entity 6: button_debouncer File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 345
+Info (12127): Elaborating entity "VendingMachine" for the top level hierarchy
+Warning (10034): Output port "LEDR[7..6]" at VendingMachine.v(12) has no driver File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 12
+Warning (10034): Output port "LEDR[3..2]" at VendingMachine.v(12) has no driver File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 12
+Info (12128): Elaborating entity "button_debouncer" for hierarchy "button_debouncer:key0db" File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 26
+Warning (10230): Verilog HDL assignment warning at VendingMachine.v(380): truncated value with size 32 to match size of target (1) File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 380
+Warning (10230): Verilog HDL assignment warning at VendingMachine.v(381): truncated value with size 32 to match size of target (21) File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 381
+Warning (10230): Verilog HDL assignment warning at VendingMachine.v(390): truncated value with size 32 to match size of target (21) File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 390
+Warning (10230): Verilog HDL assignment warning at VendingMachine.v(392): truncated value with size 32 to match size of target (21) File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 392
+Info (12128): Elaborating entity "FSM1" for hierarchy "FSM1:mainFSM" File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 34
+Warning (10230): Verilog HDL assignment warning at VendingMachine.v(229): truncated value with size 32 to match size of target (1) File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 229
+Warning (10230): Verilog HDL assignment warning at VendingMachine.v(288): truncated value with size 32 to match size of target (1) File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 288
+Info (12128): Elaborating entity "pulseFSM" for hierarchy "pulseFSM:motor1" File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 36
+Warning (10230): Verilog HDL assignment warning at VendingMachine.v(148): truncated value with size 32 to match size of target (26) File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 148
+Info (12128): Elaborating entity "pulseFSM" for hierarchy "pulseFSM:motor2" File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 38
+Warning (10230): Verilog HDL assignment warning at VendingMachine.v(148): truncated value with size 32 to match size of target (26) File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 148
+Info (12128): Elaborating entity "timer" for hierarchy "timer:mpulse" File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 41
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13034): The following nodes have both tri-state and non-tri-state drivers
+    Warning (13035): Inserted always-enabled tri-state buffer between "Arduino_IO[14]" and its non-tri-state driver. File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 14
+    Warning (13035): Inserted always-enabled tri-state buffer between "Arduino_IO[15]" and its non-tri-state driver. File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 14
+Warning (13039): The following bidirectional pins have no drivers
+    Warning (13040): bidirectional pin "Arduino_IO[0]" has no driver File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 14
+    Warning (13040): bidirectional pin "Arduino_IO[1]" has no driver File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 14
+    Warning (13040): bidirectional pin "Arduino_IO[2]" has no driver File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 14
+    Warning (13040): bidirectional pin "Arduino_IO[3]" has no driver File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 14
+    Warning (13040): bidirectional pin "Arduino_IO[4]" has no driver File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 14
+    Warning (13040): bidirectional pin "Arduino_IO[5]" has no driver File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 14
+    Warning (13040): bidirectional pin "Arduino_IO[6]" has no driver File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 14
+    Warning (13040): bidirectional pin "Arduino_IO[7]" has no driver File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 14
+    Warning (13040): bidirectional pin "Arduino_IO[8]" has no driver File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 14
+    Warning (13040): bidirectional pin "Arduino_IO[9]" has no driver File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 14
+    Warning (13040): bidirectional pin "Arduino_IO[10]" has no driver File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 14
+    Warning (13040): bidirectional pin "Arduino_IO[11]" has no driver File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 14
+    Warning (13040): bidirectional pin "Arduino_IO[12]" has no driver File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 14
+    Warning (13040): bidirectional pin "Arduino_IO[13]" has no driver File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 14
+Warning (13009): TRI or OPNDRN buffers permanently enabled
+    Warning (13010): Node "Arduino_IO[14]~synth" File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 14
+    Warning (13010): Node "Arduino_IO[15]~synth" File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 14
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 12
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 12
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 12
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 12
+    Warning (13410): Pin "HEX0[1]" is stuck at VCC File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 13
+    Warning (13410): Pin "HEX1[5]" is stuck at VCC File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 13
+    Warning (13410): Pin "HEX1[0]" is stuck at VCC File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 13
+    Warning (13410): Pin "HEX2[5]" is stuck at VCC File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 13
+    Warning (13410): Pin "HEX2[1]" is stuck at VCC File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 13
+    Warning (13410): Pin "HEX2[0]" is stuck at VCC File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 13
+    Warning (13410): Pin "HEX3[1]" is stuck at VCC File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 13
+    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 13
+    Warning (13410): Pin "HEX4[5]" is stuck at VCC File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 13
+    Warning (13410): Pin "HEX4[4]" is stuck at VCC File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 13
+    Warning (13410): Pin "HEX4[3]" is stuck at VCC File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 13
+    Warning (13410): Pin "HEX4[2]" is stuck at VCC File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 13
+    Warning (13410): Pin "HEX4[1]" is stuck at VCC File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 13
+    Warning (13410): Pin "HEX4[0]" is stuck at VCC File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 13
+    Warning (13410): Pin "HEX5[3]" is stuck at VCC File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 13
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 6 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/output_files/VendingMachine.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 10 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 10
+    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 10
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 10
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 10
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 10
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 10
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 10
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 10
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 10
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/VendingMachine.v Line: 10
+Info (21057): Implemented 342 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
+    Info (21059): Implemented 52 output pins
+    Info (21060): Implemented 16 bidirectional pins
+    Info (21061): Implemented 261 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 64 warnings
+    Info: Peak virtual memory: 4802 megabytes
+    Info: Processing ended: Thu Dec  8 15:06:21 2022
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:08
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/oars0/Documents/School/Digital_Systems/FinalProject/output_files/VendingMachine.map.smsg.
+
+

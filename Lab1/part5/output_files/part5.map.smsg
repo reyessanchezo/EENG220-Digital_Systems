@@ -1,0 +1,4 @@
+Info (10281): Verilog HDL Declaration information at part5.v(34): object "S" differs only in case from object "s" in the same scope File: C:/Users/oars0/Documents/School/Digital_Systems/Lab1/part5/part5.v Line: 34
+Info (10281): Verilog HDL Declaration information at part5.v(35): object "M" differs only in case from object "m" in the same scope File: C:/Users/oars0/Documents/School/Digital_Systems/Lab1/part5/part5.v Line: 35
+Info (10281): Verilog HDL Declaration information at part5.v(34): object "U" differs only in case from object "u" in the same scope File: C:/Users/oars0/Documents/School/Digital_Systems/Lab1/part5/part5.v Line: 34
+Info (10281): Verilog HDL Declaration information at part5.v(34): object "V" differs only in case from object "v" in the same scope File: C:/Users/oars0/Documents/School/Digital_Systems/Lab1/part5/part5.v Line: 34

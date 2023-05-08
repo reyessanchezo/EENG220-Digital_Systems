@@ -1,0 +1,22 @@
+
+State Machine - |VendingMachine|pulseFSM:motor2|y_Q
+Name y_Q.Wait y_Q.pinOFF y_Q.pinON 
+y_Q.Wait 0 0 0 
+y_Q.pinON 1 0 1 
+y_Q.pinOFF 1 1 0 
+
+State Machine - |VendingMachine|pulseFSM:motor1|y_Q
+Name y_Q.Wait y_Q.pinOFF y_Q.pinON 
+y_Q.Wait 0 0 0 
+y_Q.pinON 1 0 1 
+y_Q.pinOFF 1 1 0 
+
+State Machine - |VendingMachine|FSM1:mainFSM|y_Q
+Name y_Q.CreditsMinus y_Q.DisplayCredits y_Q.Motor2 y_Q.Motor1 y_Q.SnackSelect y_Q.CodeIn y_Q.Reset 
+y_Q.Reset 0 0 0 0 0 0 0 
+y_Q.CodeIn 0 0 0 0 0 1 1 
+y_Q.SnackSelect 0 0 0 0 1 0 1 
+y_Q.Motor1 0 0 0 1 0 0 1 
+y_Q.Motor2 0 0 1 0 0 0 1 
+y_Q.DisplayCredits 0 1 0 0 0 0 1 
+y_Q.CreditsMinus 1 0 0 0 0 0 1 

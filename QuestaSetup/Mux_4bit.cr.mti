@@ -1,0 +1,8 @@
+C:/Users/oars0/Documents/School/Digital_Systems/QuestaSetup/4bitMux.v {1 {vlog -work 4bitMux -vopt -stats=none C:/Users/oars0/Documents/School/Digital_Systems/QuestaSetup/4bitMux.v
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module Mux_4bit
+
+Top level modules:
+	Mux_4bit
+
+} {} {}}

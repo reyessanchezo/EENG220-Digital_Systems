@@ -1,0 +1,6 @@
+# Compile of Addern.v was successful.
+# Compile of testbench.v was successful.
+# 2 compiles, 0 failed with no errors.
+do testbench.tcl
+# Cannot open macro file: testbench.tcl
+cd C:/Users/oars0/Documents/School/Digital_Systems/QuestaSetup/design_files/Addern/Questa
